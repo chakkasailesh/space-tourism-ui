@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { NavBar, Home, Destination, Crew, Technology } from './components'
+import { Header, Home, Destination, Crew, Technology } from './components'
 
 const App = () => {
   return (
-    <div>
-      <NavBar />
-      <div>
+    <div className="app text-white grid">
+      <Header />
+      <div className="flex justify-center items-center">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
