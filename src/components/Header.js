@@ -13,7 +13,7 @@ const Header = () => {
         src={isOpen ? close : hamburger}
         alt={isOpen ? 'close nav' : 'open nav'}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="right-6 fixed sm:hidden z-10"
+        className="right-6 absolute sm:hidden z-10"
       />
       <NavBar isOpen={isOpen} />
     </div>

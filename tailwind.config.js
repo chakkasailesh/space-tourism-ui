@@ -10,6 +10,7 @@ module.exports = {
     },
     fontFamily: {
       signature: ['Bellefair'],
+      barlow: ['Barlow'],
     },
   },
   plugins: [],
