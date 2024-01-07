@@ -3,7 +3,7 @@ import { moon, mars, europa, titan } from '../assets'
 
 const destinations = [
   {
-    id: '1',
+    id: 0,
     name: 'MOON',
     description:
       'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
@@ -12,7 +12,7 @@ const destinations = [
     image: moon,
   },
   {
-    id: '2',
+    id: 1,
     name: 'MARS',
     description:
       'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
@@ -21,7 +21,7 @@ const destinations = [
     image: mars,
   },
   {
-    id: '3',
+    id: 2,
     name: 'EUROPA',
     description:
       'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.',
@@ -30,7 +30,7 @@ const destinations = [
     image: europa,
   },
   {
-    id: '4',
+    id: 3,
     name: 'TITAN',
     description:
       'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
@@ -54,34 +54,21 @@ const Destination = () => {
         <img
           src={destinations[index].image}
           alt={destinations[index].name}
-          className="size-[clamp(170px,39vw,445px)] mb-6 sm:mb-12"
+          className="size-[clamp(170px,39vw,445px)] mb-6 sm:mb-12 rotate"
         />
         <div className="lg:w-[31vw] flex flex-col items-center lg:items-start">
           <div className="flex text-light text-[0.875em] tracking-[2.36px] sm:text-[1em] sm:tracking-[2.6px] gap-7 sm:gap-9">
-            <button
-              onClick={() => setIndex(0)}
-              className={`pb-2 sm:pb-3 ${index === 0 && 'btn-active'}`}
-            >
-              MOON
-            </button>
-            <button
-              onClick={() => setIndex(1)}
-              className={`pb-2 sm:pb-3 ${index === 1 && 'btn-active'}`}
-            >
-              MARS
-            </button>
-            <button
-              onClick={() => setIndex(2)}
-              className={`pb-2 sm:pb-3 ${index === 2 && 'btn-active'}`}
-            >
-              EUROPA
-            </button>
-            <button
-              onClick={() => setIndex(3)}
-              className={`pb-2 sm:pb-3 ${index === 3 && 'btn-active'}`}
-            >
-              TITAN
-            </button>
+            {destinations.map(({ id, name }) => (
+              <button
+                key={name}
+                onClick={() => setIndex(id)}
+                className={`pb-2 sm:pb-3 ${
+                  index === id && 'btn-active'
+                } hover:border-b-white/50 hover:border-b-[3px]`}
+              >
+                {name}
+              </button>
+            ))}
           </div>
           <h1 className="font-signature text-[56px] sm:text-[80px] lg:text-[100px]">
             {destinations[index].name}
