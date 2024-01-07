@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="text-center lg:text-left flex flex-col justify-around lg:justify-between lg:items-end lg:flex-row gap-[clamp(81px,20vw,386px)] my-12 sm:my-[90px] lg:my-auto">
+    <div className="text-center lg:text-left flex flex-col lg:items-end lg:flex-row gap-[clamp(81px,20vw,386px)] my-12 sm:my-[90px] lg:my-auto">
       <div className="w-[310px] sm:w-[450px]">
         <h4 className="text-[1em] tracking-[2.7px] sm:text-[1.25em] sm:tracking-[3.38px] lg:text-[1.75em] lg:tracking-[4.72px] text-light">
           SO, YOU WANT TO TRAVEL TO

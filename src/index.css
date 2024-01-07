@@ -7,9 +7,14 @@
 @layer base {
   html {
     font-family: 'Barlow Condensed', sans-serif;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   body {
     background-color: #0b0d17;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -33,6 +38,11 @@
     letter-spacing: 2.7px;
     backdrop-filter: blur(1.5rem);
     background: hsl(0 0% 100% / 0.04);
+  }
+
+  .btn-active {
+    color: white;
+    border-bottom: 3px solid white;
   }
 
   @media (max-width: 639px) {

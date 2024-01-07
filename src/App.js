@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app text-white grid">
       <Header />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
