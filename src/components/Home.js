@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="text-center lg:text-left flex flex-col lg:items-end lg:flex-row gap-[clamp(81px,20vw,386px)] my-12 sm:my-[90px] lg:my-auto">
+    <div className="text-center lg:text-left flex flex-col lg:items-end lg:flex-row gap-[clamp(81px,20vw,386px)] my-12 sm:my-[90px] lg:mb-[10vw] lg:mt-[15vw]">
       <div className="w-[310px] sm:w-[450px]">
         <h4 className="text-[1em] tracking-[2.7px] sm:text-[1.25em] sm:tracking-[3.38px] lg:text-[1.75em] lg:tracking-[4.72px] text-light">
           SO, YOU WANT TO TRAVEL TO
@@ -18,10 +18,10 @@ const Home = () => {
           experience!
         </p>
       </div>
-      <div className="">
+      <div className="relative">
         <NavLink
           to="/destination"
-          className="text-[1.25rem] tracking-[1.25px] sm:text-[2rem] sm:tracking-[2px] size-[clamp(150px,30vw,274px)] bg-white text-dark font-signature rounded-full inline-grid place-items-center"
+          className="text-[1.25rem] tracking-[1.25px] sm:text-[2rem] sm:tracking-[2px] size-[clamp(150px,30vw,274px)] after:size-[clamp(150px,30vw,274px)] bg-white text-dark font-signature rounded-full inline-grid place-items-center explore z-10"
         >
           EXPLORE
         </NavLink>
