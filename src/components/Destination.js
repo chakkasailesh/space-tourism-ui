@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { moon, mars, europa, titan } from '../assets'
+import { Context } from '../App'
 
 const destinations = [
   {
@@ -42,6 +43,10 @@ const destinations = [
 
 const Destination = () => {
   const [index, setIndex] = useState(0)
+  const setChild = useContext(Context)
+  useEffect(() => {
+    setChild('destination')
+  }, [setChild])
   return (
     <div className="w-[87vw] sm:w-[75vw] lg:w-auto mt-6 sm:mt-[5.2vw]">
       <p className="text-[1em] tracking-[2.7px] sm:text-[1.25em] sm:tracking-[3.38px] lg:text-[1.75em] lg:tracking-[4.72px] mb-8 sm:mb-16 text-center sm:text-start">
@@ -54,7 +59,7 @@ const Destination = () => {
         <img
           src={destinations[index].image}
           alt={destinations[index].name}
-          className="size-[clamp(170px,39vw,445px)] mb-6 sm:mb-12 rotate"
+          className="size-[clamp(170px,39vw,445px)] mb-6 sm:mb-12"
         />
         <div className="lg:w-[31vw] flex flex-col items-center lg:items-start">
           <div className="flex text-light text-[0.875em] tracking-[2.36px] sm:text-[1em] sm:tracking-[2.6px] gap-7 sm:gap-9">

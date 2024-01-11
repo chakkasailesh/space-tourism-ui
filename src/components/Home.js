@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import { Context } from '../App'
 
 const Home = () => {
+  const setChild = useContext(Context)
+  useEffect(() => {
+    setChild('home')
+  }, [setChild])
   return (
     <div className="text-center lg:text-left flex flex-col lg:items-end lg:flex-row gap-[clamp(81px,20vw,386px)] my-12 sm:my-[90px] lg:mb-[10vw] lg:mt-[15vw]">
       <div className="w-[310px] sm:w-[450px]">
@@ -21,7 +26,7 @@ const Home = () => {
       <div className="relative">
         <NavLink
           to="/destination"
-          className="text-[1.25rem] tracking-[1.25px] sm:text-[2rem] sm:tracking-[2px] size-[clamp(150px,30vw,274px)] after:size-[clamp(150px,30vw,274px)] bg-white text-dark font-signature rounded-full inline-grid place-items-center explore z-10"
+          className="text-[1.25rem] tracking-[1.25px] sm:text-[2rem] sm:tracking-[2px] size-[clamp(150px,30vw,274px)] after:size-[clamp(150px,30vw,274px)] bg-white text-dark font-signature rounded-full inline-grid place-items-center explore"
         >
           EXPLORE
         </NavLink>

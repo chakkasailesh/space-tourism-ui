@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { anousheh, douglas, mark, victor } from '../assets'
+import { Context } from '../App'
 
 const crewmembers = [
   {
@@ -37,10 +38,14 @@ const crewmembers = [
 ]
 
 const Crew = () => {
+  const setChild = useContext(Context)
   const [index, setIndex] = useState(0)
+  useEffect(() => {
+    setChild('crew')
+  }, [setChild])
   return (
     <div className="flex flex-col items-center lg:items-start gap-[clamp(32px,8vw,60px)] lg:gap-0 w-[90vw] lg:w-full lg:ml-[11vw]">
-      <p className="text-[1em] tracking-[2.7px] sm:text-[1.25em] sm:tracking-[3.38px] xl:text-[1.75em] xl:tracking-[4.72px] sm:self-start sm:mt-10 lg:mt-0">
+      <p className="text-[1em] tracking-[2.7px] sm:text-[1.25em] sm:tracking-[3.38px] xl:text-[1.75em] xl:tracking-[4.72px] sm:self-start sm:mt-10 lg:mt-0 sm:ml-14 lg:ml-0">
         <span className="text-white text-opacity-25 font-bold mr-[1em]">
           02
         </span>
