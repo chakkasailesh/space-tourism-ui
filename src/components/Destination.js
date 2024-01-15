@@ -81,7 +81,7 @@ const Destination = () => {
           <p className="text-center lg:text-start text-light text-[0.9375em] leading-[25px] sm:text-[1em] sm:leading-7 lg:text-[1.125em] lg:leading-8 font-barlow mb-8 sm:mb-16">
             {destinations[index].description}
           </p>
-          <div className="text-center lg:text-start flex flex-col sm:flex-row sm:gap-[50px] lg:gap-[4.7vw] sm:justify-center lg:justify-normal border-t-[#383B4B] border-t pt-7">
+          <div className="text-center lg:text-start flex flex-col sm:flex-row gap-4 sm:gap-[50px] lg:gap-[4.7vw] sm:justify-center lg:justify-normal border-t-[#383B4B] border-t pt-7">
             <div>
               <p className="text-[0.875em] tracking-[2.36px] text-light">
                 AVG. DISTANCE
